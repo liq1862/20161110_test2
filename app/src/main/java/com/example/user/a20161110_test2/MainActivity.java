@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.add("關於我們");
+        menu.add("設定");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         if(item.getTitle().toString().equals("關於我們"))
         {
             Toast.makeText(MainActivity.this,"按下關於我們",Toast.LENGTH_SHORT).show();
+        }
+        if(item.getTitle().toString().equals("設定"))
+        {
+            Toast.makeText(MainActivity.this,"按下設定",Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
