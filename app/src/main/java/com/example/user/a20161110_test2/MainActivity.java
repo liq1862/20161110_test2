@@ -17,18 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("關於我們");
-        menu.add("設定");
+        menu.add(0,0,0,"關於我們");                     // menu.add(Group,ItemId,Order,title)
+        menu.add(0,1,1,"設定");
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getTitle().toString().equals("關於我們"))
+        if(item.getItemId() == 0)
         {
             Toast.makeText(MainActivity.this,"按下關於我們",Toast.LENGTH_SHORT).show();
         }
-        if(item.getTitle().toString().equals("設定"))
+        if(item.getItemId() == 1)
         {
             Toast.makeText(MainActivity.this,"按下設定",Toast.LENGTH_SHORT).show();
         }
